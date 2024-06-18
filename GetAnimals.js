@@ -23,7 +23,7 @@ fetch(apiUrl)
             AnimalCard.setAttribute('id', animal.name);
 
             AnimalCard.innerHTML = `
-                <div class="AnimalPhoto" > ${animal.image} </div>
+                <div class="AnimalPhoto"> ${animal.image} </div>
                 
                 <div class="AnimalDescription">
                     <h1> Nome: ${animal.name}</h1>
