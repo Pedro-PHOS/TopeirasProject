@@ -7,9 +7,20 @@
     <title>Toppeira</title>
 </head>
 <body>
-    <div id="AnimalList">
-        
-    </div>
+    <header>
+        <h1 id="Logo">ToppeiraCard</h1>
+
+        <div id="searchBar">
+            <button onclick=SearchAnimal() id="searchButton" >
+                <img  src="/images/search-icon-2048x2048-cmujl7en.png" alt="">
+            </button>
+
+            <input id="SearchInput" type="text">
+        </div>
+    </header>
+
+    <div id="AnimalList"></div>
+
     <script src="/GetAnimals.js"></script>
 </body>
 </html>

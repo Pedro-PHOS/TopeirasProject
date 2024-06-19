@@ -8,37 +8,148 @@ h1{
     font-size: 16px;
 }
 
-body{
+body{background-color: #fffffff1;}
+
+header{
+    background-color: #ffffff;
+    height: 6rem;
+    border-bottom: solid black 1px;
+
     display: grid;
-    grid-template-rows:    repeat(1, 100px);
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 100rem;
-    column-gap: 100rem;
-    height: 1000vh;
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-items: center;
+}
+
+#Logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    position: absolute;
+    justify-self: start;
+    align-self: center;
+    margin: 2rem;
+}
+
+#searchBar{
+    width: 40%;
+    height: 3rem;
+    background-color: white;
+    border: 1px solid black;
+
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#searchBar input{
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    padding-inline: 1rem;
+}
+
+#searchButton{
+    height: fit-content;
+
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid black;
+    cursor: pointer;
+}
+
+#searchButton img{
+    height: 2rem;
+    cursor: pointer;
 }
 
 #AnimalList{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-row-gap: 2rem;
+    grid-column-gap:2rem ;
+    justify-content: center;
+    padding: 2rem;
 }
 
 .CardAnimal{
-    height: 250px;
+    height: auto;
     width: 200px;
-    background-color: antiquewhite;
+    background-color:  #ffffff;;
     border: 2px solid black;
 }
 
 .AnimalPhoto{
-    background-color: white;
-    height: 50%;
-    width: 100%;
-    border-bottom: 1px solid black;
+    background-color:  #ffffff;;
+    height: max-content;
+    text-align: center;
+    padding-block: 1rem;
+}
+
+.AnimalPhoto img{
+    width: 60%;
+    border-radius: 100px;
 }
 
 .AnimalDescription{
-    height: 50%;
-    width: 100%;
+    height: max-content;
+    padding: 5%;
+}
+
+@media (max-width: 1150px){
+    
+    #AnimalList{
+        grid-template-columns: repeat(4, auto);
+    }
+}
+
+@media (max-width: 900px){
+
+    #AnimalList{
+        grid-template-columns: repeat(3, auto);
+    }
+
+}
+
+@media (max-width: 670px){
+
+    #Logo{
+        font-size: 16px;
+    }
+    
+    #searchBar{
+        width: 40%;
+        height: 2rem;
+    }
+    
+    #searchButton img{
+        height: 1rem;
+    }
+    
+    #AnimalList{
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media (max-width: 440px){
+
+    #Logo{
+        font-size: 12px;
+    }
+    
+    #searchBar{
+        width: 40%;
+        height: 2rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #searchButton img{
+        height: 1rem;
+    }
+    
+    #AnimalList{
+        grid-template-columns: repeat(1, auto);
+    }
 }
