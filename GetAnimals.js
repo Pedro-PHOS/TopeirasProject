@@ -3,8 +3,6 @@ const AnimalList = document.getElementById("AnimalList");
 // URL da API
 const apiUrl = 'https://freetestapi.com/api/v1/animals';
 
-
-
 // Fazer uma requisição GET
 fetch(apiUrl)
   .then(response => {
@@ -14,50 +12,28 @@ fetch(apiUrl)
     }
     return response.json(); // Converter a resposta para JSON
   })
+
   .then(data => {
-    console.log(data)
 
-    const imagesAnimal = [
-      { id: 1, image: "Leão" },
-      { id: 2, image: "Elefante" },
-      { id: 3, image: "Tigre" }
-    ];
-    
     data.forEach(animal => {
-      let encontrado = false;
-    
-      imagesAnimal.forEach(animalImagem => {
-        if (animalImagem.id === animal.id) {
-          encontrado = true;
-        }
-      });
-    
-      if (encontrado) {
-        console.log("Verdadeiro");
-      } else {
-        console.log("Falso");
-        console.log(animal.name);
-      }
-
         const AnimalCard = document.createElement('div');
         AnimalCard.classList.add('CardAnimal');
         AnimalCard.setAttribute('id', animal.name);
 
         AnimalCard.innerHTML = `
-            <div class="AnimalPhoto"><img src="${animal.image}"></div>
-            
-            <div class="AnimalDescription">
-                <h1> Nome: ${animal.name}</h1>
-                <p>Especie: ${animal.species}</p>
-                <p>Dieta: ${animal.diet}</p>
-                <p>Descrição: ${animal.description} </p>
-            </div>
-        `;
+          <div class="AnimalPhoto"><img src="${animal.image}"></div>
+          
+          <div class="AnimalDescription">
+            <h1> Nome: ${animal.name}</h1>
+            <p>Especie: ${animal.species}</p>
+            <p>Dieta: ${animal.diet}</p>
+            <p>Descrição: ${animal.description} </p>
+          </div>`;
 
         AnimalList.appendChild(AnimalCard);
-      });
-
-  });
+            
+      })
+    });
 
 function SearchAnimal() {
 

@@ -98,6 +98,61 @@ header{
     padding: 5%;
 }
 
+footer{
+    height: 10rem;
+    width: 100%;
+
+    position: fixed;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#PreviewBtn {
+    width: 5rem;
+    transform: scaleX(-1);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Pagina{
+    width: 5rem;
+    font-size: 18px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#NextBtn {
+    width: 5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#PreviewBtn img{
+    width: 80%;
+    transform: scaleY(-1);
+}
+
+#NextBtn img{
+    width:80%;
+}
+
+
 @media (max-width: 1150px){
     
     #AnimalList{
