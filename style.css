@@ -24,13 +24,24 @@ header{
 #Logo{
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 30px;
+    justify-content: space-between;
+    
     position: absolute;
     justify-self: start;
     align-self: center;
-    margin: 2rem;
+    margin-left: 2rem;
 }
+
+#Logo h1{
+    font-size: 30px;
+}
+
+#Logo img{
+    position: absolute;
+    margin-left: 15rem;
+    width: 100px;
+}
+
 
 #searchBar{
     width: 40%;
@@ -116,8 +127,6 @@ header{
 footer{
     height: 10rem;
     width: 100%;
-
-    position: fixed;
     
     display: flex;
     align-items: center;
@@ -170,14 +179,31 @@ footer{
 
 @media (max-width: 1150px){
     
-    #AnimalList{
+    #animalList{
         grid-template-columns: repeat(4, auto);
     }
 }
 
 @media (max-width: 900px){
 
-    #AnimalList{
+    #Logo{
+        margin-left: 1rem;
+    }
+    
+    #Logo h1{
+        font-size: 20px;
+    }
+    
+    #Logo img{
+        margin-left: 9rem;
+        width: 90px;
+    }
+
+    #searchBar{
+        grid-template-columns: 1fr 4fr 0.5fr;
+    }
+
+    #animalList{
         grid-template-columns: repeat(3, auto);
     }
 
@@ -186,40 +212,57 @@ footer{
 @media (max-width: 670px){
 
     #Logo{
+        margin-left: 1rem;
+    }
+    
+    #Logo h1{
+        font-size: 15px;
+    }
+    
+    #Logo img{
+        display:  none;
+     }
+
+    #Logo{
         font-size: 16px;
     }
     
     #searchBar{
-        width: 40%;
-        height: 2rem;
+        width: 60%;
+        grid-template-columns: 0.5fr 4fr 0.4fr;
     }
     
     #searchButton img{
         height: 1rem;
     }
     
-    #AnimalList{
+    #animalList{
         grid-template-columns: repeat(2, auto);
     }
 }
 
 @media (max-width: 440px){
+    
+    #Logo img{
+       display:  none;
+    }
 
-    #Logo{
-        font-size: 12px;
+
+    #Logo h1{
+        font-size: 9px;
     }
     
     #searchBar{
-        width: 40%;
+        width: 60%;
         height: 2rem;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 0.5fr 1fr 0.4fr;
     }
 
     #searchButton img{
         height: 1rem;
     }
     
-    #AnimalList{
+    #animalList{
         grid-template-columns: repeat(1, auto);
     }
 }
