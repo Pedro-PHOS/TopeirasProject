@@ -39,7 +39,7 @@ header{
     border: 1px solid black;
 
     display: grid;
-    grid-template-columns: 1fr 9fr;
+    grid-template-columns: 1fr 8fr 0.5fr;
     align-items: center;
     justify-content: space-around;
 }
@@ -65,7 +65,22 @@ header{
     cursor: pointer;
 }
 
-#AnimalList{
+#close_btn{
+    height: fit-content;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    border-left: 1px solid black;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+
+#animalList{
     display: grid;
     grid-template-columns: repeat(5, auto);
     grid-row-gap: 2rem;
